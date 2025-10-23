@@ -1,0 +1,20 @@
+// Suma: add(q)(p) = p + q
+def add(q) = def(p) = p + q
+
+// Multiplicación por 4: t4(p) = p * 4
+def t4(p) = p * 4
+
+// Multiplicación por 256: t256(p) = ((((p * 4) * 4) * 4) * 4)
+def t256(p) = t4(t4(t4(t4(p))))
+
+// Operador lógico not: not(p) = si p entonces false sino true
+def not(p) = if p then false else true
+
+// Operador lógico or: or(p)(q) = si p entonces true sino q
+def or(p) = def(q) = if p then true else q
+
+// Implicación lógica: implies(p)(q) = or(not(p))(q)
+def implies(p) = def(q) = or(not(p))(q)
+
+// Mínimo entre dos valores: min(a)(b)
+def min(a) = def(b) = if a < b then a else b
